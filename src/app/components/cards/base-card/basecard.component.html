@@ -1,0 +1,63 @@
+<div class="bc-card">
+  <storybook-header-momentos
+    [title]="headerTitle"
+    [subtitle]="headerSubtitle"
+    [content]="headerContent"
+    [fullWidth]="true"
+  ></storybook-header-momentos>
+
+  <p class="bc-card__section-title">
+    Punto a adicionar a la ruta de labor : Identificador Ruta
+  </p>
+
+  <div class="bc-card__dropdowns">
+    <app-dropdown-menu
+      state="label"
+      [textField]="dropdownPlaceholder1"
+      [options]="dropdownOptions"
+    ></app-dropdown-menu>
+    <app-dropdown-menu
+      state="label"
+      [textField]="dropdownPlaceholder2"
+      [options]="dropdownOptions"
+    ></app-dropdown-menu>
+    <app-dropdown-menu
+      state="label"
+      [textField]="dropdownPlaceholder3"
+      [options]="dropdownOptions"
+    ></app-dropdown-menu>
+  </div>
+
+  <ng-container *ngIf="showCheckbox">
+    <p class="bc-card__section-title">
+      Punto a adicionar a la ruta de labor : Identificador Ruta
+    </p>
+    <div class="bc-card__checkbox">
+      <storybook-checkbox-text [label]="checkboxLabel"></storybook-checkbox-text>
+    </div>
+  </ng-container>
+
+  <div class="bc-card__actions">
+    <app-button
+      label="button"
+      color="primary"
+      size="medium"
+      styles="filled"
+      state="active"
+      orientation="center"
+      [showIconStart]="false"
+      [showIconEnd]="false"
+    ></app-button>
+    <app-button
+      *ngIf="showCheckbox"
+      label="button"
+      color="error"
+      size="medium"
+      styles="text"
+      state="active"
+      orientation="center"
+      [showIconStart]="false"
+      [showIconEnd]="false"
+    ></app-button>
+  </div>
+</div>
